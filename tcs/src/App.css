@@ -1,0 +1,88 @@
+
+html,body {
+    height: 100%;
+  }
+  
+  .header--wrapper{
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    padding-left: 2vw;
+    padding-bottom: 1vw;
+
+  }
+
+    
+  .footer--wrapper{
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    padding-right: 2vw;
+    padding-bottom: 1vw;
+    text-align: right
+
+  }
+  .wrapper {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+  }
+  
+  .fixed-bg {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%; 
+    width: 100%;
+    color: white;
+    text-align: center;
+    display: table;
+  }
+  
+  .scroll-bg {
+    background-color: black;
+    width: 50%;
+  }
+  
+  /* first section */
+  
+  .bg-1 {
+    background-image: url('images/gallery/huddle.jpg');
+  }
+  
+  /* third section */
+  
+  .bg-2 {
+    background-image: url('images/gallery/huddle.jpg');
+  }
+  
+  /* fifth section */
+  
+  .bg-3 {
+    background-image: url('images/gallery/huddle.jpg');
+  }
+  .toTheLeft{
+    height: 300px;
+    float: left;
+}
+
+.toTheRight{
+    height: 300px;
+    float: right;
+}
+
+.background--photo{
+    height: 20vh;
+}
+
+.clearButton{
+    background: transparent;
+    color: white;
+}
