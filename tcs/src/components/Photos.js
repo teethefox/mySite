@@ -20,19 +20,14 @@ export default class Photos extends React.Component {
     render() {          
         const {images} = {...this.state}
       return (
-        <main className="main-wrapper" id="container"> 
+        <main className="" id="container"> 
           
-        <div className="wrapper">
+        <div className="masonry">
           <div className="">
-            <ul className="">
+            <ul style={{listStyle: 'none'}}>
             {images.map((index, photo) => (
-              <li className="masonry-item grid" key={index}>
-                <figure className="effect-sarah"> <img src={require("../images/gallery/"+(photo+1)+".jpg")} />
-                  <figcaption>
-                    <h2>Photo <span>Title</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="details.html">View more</a> </figcaption>
-                </figure>
+              <li className="item" key={index}>
+                <img src={require("../images/gallery/"+(photo+1)+".jpg")} />
               </li>
               ))}
               </ul>

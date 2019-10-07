@@ -68,21 +68,160 @@ html,body {
   .bg-3 {
     background-image: url('images/gallery/huddle.jpg');
   }
-  .toTheLeft{
-    height: 300px;
-    float: left;
-}
 
-.toTheRight{
-    height: 300px;
-    float: right;
-}
+@media only screen and (min-width: 769px) {
+
+    .toTheRight{
+        height: 250px;
+        float: right;
+        padding: 20px;
+        line-height: 7vh;
+    }
+    .toTheLeft{
+        height: 250px;
+        float: left;
+        padding: 20px;
+        line-height: 7vh;
+
+    }
+    
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .toTheRight{
+        height: 250px;
+        padding: 20px;        
+        width: auto;
+        line-height: 7vh;
+
+    }
+    .toTheLeft{
+        height: 250px;
+        padding: 20px;
+        width: auto;
+        line-height: 7vh;
+
+        
+    }
+    
+  }
+
 
 .background--photo{
-    height: 20vh;
+    height: 15vh;
 }
 
 .clearButton{
     background: transparent;
     color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.clearButton:hover{
+    background: white;
+    color: black;
+    font-weight: 700;
+    transform: scale(1.1);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.navigation{
+    list-style: none;
+    float: right;
+    display: inline-flex;
+}
+
+.navigation--links{
+    border-right: 0.5px solid white;
+    padding: 10px;
+    font-weight: 500;
+    color: white !important;
+}
+
+.topnav {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+ /* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* The Masonry Container */
+  .masonry {
+    margin: 1.5em auto;
+    max-width: 75vw;
+    column-gap: 1.5em;
+  }
+  
+  /* The Masonry Brick */
+  .item {
+    background: black;
+    padding: 1em;
+    margin: 0 0 1.5em;
+  }
+  
+  /* Masonry on large screens */
+  @media only screen and (min-width: 1024px) {
+    .masonry {
+      column-count: 3;
+    }
+  }
+  
+  /* Masonry on medium-sized screens */
+  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+  
+  /* Masonry on small screens */
+  @media only screen and (max-width: 767px) and (min-width: 540px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+.item img:hover{
+    transform: scale(1.1)
+    
 }

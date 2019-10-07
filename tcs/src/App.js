@@ -5,17 +5,37 @@ import Photos from './components/Photos';
 import Header from './static/Header';
 import Footer from './static/Footer';
 import Home from './static/Home';
-function App() {
-  return (
+export default class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+          display: "home"
+        };
+    }
+    componentDidMount(){
+        // this.getImages()
+    }
+
+    showWork = (type) =>{
+      this.setState({display: type})
+    }
+
+    render() {    
+      const display = this.state.display ;     
+      return (
     <div className="App">
-      <Header></Header>
-      <div className=" masonry-layout">
-      {/* <Photos></Photos></div> */}
-      </div>
-      <Home> </Home>
+      <Header onClick={this.showWork}></Header>
+      
+        {display === "photos" ?
+        <div className=" masonry-layout">
+          <Photos onClick={this.showWork}></Photos>
+        </div>
+        : display === "home" &&
+          <Home onClick={this.showWork}> </Home>
+        }
       <Footer></Footer>
     </div>
   );
 }
+}
 
-export default App;
